@@ -12,6 +12,7 @@
 #include "List.h"
 #include "NewWorkStation.h"
 #include "ComputerClass.h"
+#include "ComputerClassArray.h"
 #include <vector>
 
 int main()
@@ -43,9 +44,19 @@ int main()
        obj1.Insert(headphone1);
        obj1.Insert(WS1);
        WS1->setPrice(2000);
-       obj1.downWalkMod();
+
        cout << "////////////////////////\n";
-       obj1.Show();
+    
+
+       ComputerClassArray obj2;
+       obj2.add(mouse1);
+       obj2.add(headphone1);
+       obj2.add(monitor1);
+       obj2.add(WS1);
+       headphone1->setPrice(10000);
+       obj2.show();
+       cout << "//////////////////\n";
+       obj2.downWalk();
     return 0;
 }
 

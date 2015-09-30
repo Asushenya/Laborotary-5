@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="ComputerClass.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="ComputerClassArray.h" />
     <ClInclude Include="HeadPhone.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Monitor.h" />

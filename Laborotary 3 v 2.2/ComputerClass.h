@@ -39,7 +39,7 @@ public:
    }
 
    void downWalk();
-   void downWalkMod();
+  
    int getSumOfEquipment();
    void showBadEquipment();
 
@@ -126,43 +126,8 @@ void ComputerClass::Delete(Product *p)
 
 }
 
-void ComputerClass::downWalk()
-{
-    Product *r,*temp;
-    int arrayOfPrice[10];
-    r = begin;
-    int tempPrise = -1;
-    int tempIndex = 0;
-    int i = 0;
-           while (r)
-           {
-               arrayOfPrice[tempIndex++] = r->getPrice();
-              
-               r = r->next;
-           } 
-        
-           for (int i = 0;i < itemCounter;i++)
-           {
-               cout << arrayOfPrice[i] << endl;
-           }
-           //ok, now we have array with prices of our objects
-           sort(arrayOfPrice,(arrayOfPrice+itemCounter));
-           r = begin; //set to zero our pointer to begin list
-           
-           for (int i = 0;i < itemCounter;i++)
-               {
-                   r = begin;
-                   while (r)
-                           {
-                               if (r->getPrice() == arrayOfPrice[itemCounter-i-1])// try to equal elements of array and price of every object
-                                         {
-                                           r->showInfo();
-                                         }
-                               r = r->next;
-                           }
-               }
 
-}
+
 
 int ComputerClass::getSumOfEquipment()
 {
@@ -196,7 +161,7 @@ void ComputerClass::showBadEquipment()
 }
 
 
-void ComputerClass::downWalkMod()
+void ComputerClass::downWalk()
 {
     Product *r, *temp;
     int arrayOfPrice[50];
@@ -243,7 +208,7 @@ void ComputerClass::downWalkMod()
         }
     }
 
-    // now we must bact values of prices
+    // now we must back values of prices
     tempIndex = 0;
     r = begin;
     while (r)

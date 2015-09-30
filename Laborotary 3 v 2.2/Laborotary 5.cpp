@@ -42,10 +42,10 @@ int main()
        obj1.Insert(mouse1);
        obj1.Insert(headphone1);
        obj1.Insert(WS1);
-       WS1->setQuantityOfDays(10);
-   
-       obj1.showBadEquipment();
-      
+       WS1->setPrice(2000);
+       obj1.downWalkMod();
+       cout << "////////////////////////\n";
+       obj1.Show();
     return 0;
 }
 
